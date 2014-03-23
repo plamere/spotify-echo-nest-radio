@@ -2,6 +2,8 @@
 
 This is a demo app that shows how to use The Echo Nest API with the Spotify API to generate Echo Nest playlists for the currently playing song.
 
+![Screen shot](https://raw.githubusercontent.com/plamere/spotify-echo-nest-radio/master/ss-small.png)
+
 ## Getting started
 
  1. Sign up for a [developer account on Spotify](https://developer.spotify.com/technologies/apps/#developer) by logging in and agreeing to the [terms of use] (https://developer.spotify.com/technologies/apps/terms-of-use/).
@@ -17,4 +19,4 @@ This is a demo app that shows how to use The Echo Nest API with the Spotify API 
  
  The app uses requires the use of an Echo Nest API key. A demo key with a very low rate limit is included in the demo. You should switch this to your own API key. Look for the line with the // CHANGE ME comment in js/enr.js and change the api_key there to your own api key.
  
-![Screen shot](https://raw.githubusercontent.com/plamere/spotify-echo-nest-radio/master/ss-small.png)
+
