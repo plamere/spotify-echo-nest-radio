@@ -17,4 +17,4 @@ This is a demo app that shows how to use The Echo Nest API with the Spotify API 
  
  The app uses requires the use of an Echo Nest API key. A demo key with a very low rate limit is included in the demo. You should switch this to your own API key. Look for the line with the // CHANGE ME comment in js/enr.js and change the api_key there to your own api key.
  
-
+![Screen shot](https://raw.githubusercontent.com/plamere/spotify-echo-nest-radio/master/ss.png =600x)
