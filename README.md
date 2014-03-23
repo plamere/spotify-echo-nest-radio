@@ -16,7 +16,7 @@ This is a demo app that shows how to use The Echo Nest API with the Spotify API 
  7. If the app doesn't load, restart Spotify completely and type again `spotify:app:echo-nest-radio` in the Search box.
  8. Play a song in spotify. Click on the **Generate Playlist** button to generate a playlist
  
- 
- The app uses requires the use of an Echo Nest API key. A demo key with a very low rate limit is included in the demo. You should switch this to your own API key. Look for the line with the // CHANGE ME comment in js/enr.js and change the api_key there to your own api key.
+
+The app uses requires the use of an Echo Nest API key. A demo key with a very low rate limit is included in the demo. You should switch this to your own API key. Look for the line with the // CHANGE ME comment in js/enr.js and change the api_key there to your own api key.
  
 
