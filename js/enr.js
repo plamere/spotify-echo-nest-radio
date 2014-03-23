@@ -41,23 +41,29 @@ require([
         });
 
         function showPlaylist(songs) {
-            models.Playlist.createTemporary('temp_' + new Date().getTime()).done(function(tempPlaylist) {
-                tempPlaylist.load('tracks').done( 
-                  function(playlist) {
-                    var tracks = [];
-                    $.each(songs, function(num,song){
-                        var uri = song.tracks[0].foreign_id;
-                        uri = uri.replace('-WW', '');
-                        tracks.push(models.Track.fromURI(uri));
-                    });
-                    playlist.tracks.add.apply(playlist.tracks, tracks).done(function(tracks) {
-                        var playlistList = List.forPlaylist(playlist);
-                        playlistList.init();
-                        $("#radio-tracks").empty();
-                        $("#radio-tracks").append(playlistList.node);
+            if(songs){
+                models.Playlist.createTemporary('temp_' + new Date().getTime()).done(function(tempPlaylist) {
+                    tempPlaylist.load('tracks').done( 
+                      function(playlist) {
+                        var tracks = [];
+                        $.each(songs, function(num,song){
+                            var uri = song.tracks[0].foreign_id;
+                            uri = uri.replace('-WW', '');
+                            tracks.push(models.Track.fromURI(uri));
+                        });
+                        playlist.tracks.add.apply(playlist.tracks, tracks).done(function(tracks) {
+                            var playlistList = List.forPlaylist(playlist);
+                            playlistList.init();
+                            $("#radio-tracks").empty();
+                            $("#radio-tracks").append(playlistList.node);
+                        });
                     });
                 });
-            });
+            }
+            else{
+                $("#radio-tracks").empty();
+                $("#radio-tracks").append('No playlist found!');
+            }
         }
 
         function fetchSongRadioPlaylist(track) {
