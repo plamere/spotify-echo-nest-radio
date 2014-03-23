@@ -10,7 +10,7 @@ This is a demo app that shows how to use The Echo Nest API with the Spotify API 
  2. Sign up for a [developer account at The Echo Nest](http://developer.echonest.com)
  2. Create the Spotify folder if it doesn't exist already: `~/Spotify` (Mac OS X and Linux) or `My Documents\Spotify` (Windows).
  3. Open the Spotify folder.
- 4. Run `git clone git://github.com/spotify/echo-nest-radio.git echo-nest-radio`.
+ 4. Run `git clone http://github.com/plamere/spotify-echo-nest-radio.git echo-nest-radio`.
  5. Download [the desktop client of Spotify](http://spotify.com/download).
  6. Open the desktop client and type `spotify:app:echo-nest-radio` in the Search box.
  7. If the app doesn't load, restart Spotify completely and type again `spotify:app:echo-nest-radio` in the Search box.
