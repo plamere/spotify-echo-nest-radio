@@ -1,0 +1,34 @@
+{
+	"BundleType": "Application",
+	"BundleIdentifier": "echo-nest-radio",
+    "BundleVersion": "0.2",
+	"AcceptedLinkTypes":[ ],
+
+	"AppIcon": {
+		"18x18": "icon.png"
+	},
+	"AppName": {
+		"en": "Echo Nest Radio"
+	},
+
+	"AppDescription": {
+		"en": "Generates an Echo Nest Radio station for the currently playing artist"
+	},
+
+	"SupportedLanguages": [
+		"en"
+	],
+
+    "Dependencies": {
+      "api": "1.38.0",
+      "views": "1.18.1"
+     },
+
+
+
+	"RequiredPermissions": [
+		"http://*.echonest.com"
+	],
+	"RequiredInterface": "1",
+	"VendorIdentifier": "com.echonest"
+}
