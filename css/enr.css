@@ -1,3 +1,15 @@
-#go {
+#save {
     margin-bottom:10px;
+}
+
+#info {
+    margin-bottom:10px;
+}
+
+#playlist {
+    display:none;
+}
+
+#now-playing {
+    font-weight:bold;
 }

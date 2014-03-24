@@ -16,11 +16,15 @@
 	</head>
 	<body>
         <h2> Echo Nest Radio </h2>
-        <h3>
-            Create an Echo Nest playlist for <span id="now-playing"> the current song</span>
-        </h3>
-        <button id="go"> Generate Playlist</button>
+        <div>
+            <span id=""> Generate a playlist based on <span id="now-playing"> the current song</span> 
+            <button id="go"> Go </button>
+        </div>
         <div id="info"> </div>
-        <div id="radio-tracks"></div>
+        <div id="playlist">
+            <h3 id="cur-playlist"> Current Playlist </h3>
+            <button id="save"> Save this playlist to Spotify</button>
+            <div id="radio-tracks"></div>
+        </div>
 	</body>
 </html>
