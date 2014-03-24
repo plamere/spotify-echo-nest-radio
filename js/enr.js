@@ -13,10 +13,10 @@ var numTracks = 40;
 
 require([
     '$api/models',
-    '$views/list#List',
-    '$views/throbber#Throbber'], 
+    '$views/list#List'
+    ], 
 
-    function(models, List, Throbber) {
+    function(models, List) {
         var player = models.player;
         var curTrack = null;
         var curSongs = null;
@@ -35,9 +35,10 @@ require([
         });
 
         function showPlaylist(songs) {
+            info("");
             $("#playlist").show();
             if(songs){
-                $("#cur-playlist").text("Echo Nest Radio for " +
+                $("#cur-playlist").text("The Echo Nest Radio for " +
                     curPlaylistTrack.name + " by " + curPlaylistTrack.artists[0].name);
                 curSongs = songs;
                 models.Playlist.createTemporary('temp_' + new Date().getTime()).done(function(tempPlaylist) {
@@ -59,10 +60,9 @@ require([
                 });
             }
             else{
-                $("#radio-tracks").empty();
+                $("#playlist").hide();
                 info('No songs found!');
             }
-            throbber.hide();
         }
 
         function savePlaylist(songs) {
@@ -76,7 +76,7 @@ require([
                         uri = uri.replace('-WW', '');
                         tracks.push(models.Track.fromURI(uri));
                     });
-                    var description = 'Echo Nest Radio based on the song ' 
+                    var description = 'The Echo Nest Radio based on the song ' 
                         + curPlaylistTrack.name + " by " + curTrack.artists[0].name;
                     playlist.setDescription(description);
                     playlist.tracks.add.apply(playlist.tracks, tracks).done(function(tracks) {
@@ -144,8 +144,7 @@ require([
         }
 
         function createPlaylist(track) {
-            info("");
-            throbber.show();
+            info("Creating the playlist ....");
             $("#playlist").hide();
             curPlaylistTrack = track;
             fetchSongRadioPlaylist(track);
@@ -154,9 +153,6 @@ require([
         function info(msg) {
             $("#info").text(msg);
         }
-
-        throbber = Throbber.forElement(document.getElementById('info'));
-        throbber.hide();
 
         $("#go").click(function() {
             if (curTrack) {
